@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {ActionCreators} from '../actions'
 import { bindActionCreators } from 'redux'
 import Home from './Home'
+import ApplicationTabs from './ApplicationTabs'
 
 class AppContainer extends Component{
   constructor(props){
@@ -10,7 +11,8 @@ class AppContainer extends Component{
   }
   render(){
     return(
-        <Home {...this.props} />
+      <ApplicationTabs {...this.props}/>
+      //  <Home {...this.props} />
     )
   }
 }

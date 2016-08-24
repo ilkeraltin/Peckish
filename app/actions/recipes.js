@@ -8,8 +8,8 @@ const params=[
 ].join('&');
 
 console.log(params);
-return Api.get(`?${params}`).then(resp=>{
-  dispatch(setSearchedRecipes({recipes:resp}))
+return Api.get(`?${params}`).then(recipes=>{
+  dispatch(setSearchedRecipes({recipes}))
 }).catch((ex)=>{
   console.log(ex);
 })
@@ -21,7 +21,7 @@ export function setSearchedRecipes({ recipes }){
   return{
     type:types.SET_SEARCHED_RECIPES,
     recipes
-  }  
+  }
 }
 
 export function addRecipe(){
